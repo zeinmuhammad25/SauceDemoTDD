@@ -20,20 +20,19 @@ public class Main {
         driver.findElement(By.xpath("//input[@id='user-name']")).sendKeys("standard_user");
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("secret_sauce");
         driver.findElement(By.xpath("//input[@id='login-button']")).click();
-//
-//        String c = "ini xpath";
-//        Thread.sleep(3000);
-//        driver.findElement(By.xpath(c)).click();
-//        Select a = new Select(driver.findElement(By.xpath("//select[@class='product_sort_container']")));
-//        a .selectByVisibleText("locator");
-//
-//        String b = driver.findElement(By.xpath("//h1[@class='entry-title']")).getText();
-//
-//        System.out.println(b);
-//
-//        driver.findElement(By.xpath("//h1[@class='entry-title']")).isDisplayed();
-//
-//        driver.quit();
+
+          String c = "ini xpath";
+          Thread.sleep(3000);
+          driver.findElement(By.xpath(c)).click();
+          Select a = new Select(driver.findElement(By.xpath("//select[@class='product_sort_container']")));
+          a .selectByVisibleText("locator");
+
+         String b = driver.findElement(By.xpath("//h1[@class='entry-title']")).getText();
+ 
+         System.out.println(b);
+
+         driver.findElement(By.xpath("//h1[@class='entry-title']")).isDisplayed();
+          driver.quit();
 
         Thread.sleep(5000);
 
