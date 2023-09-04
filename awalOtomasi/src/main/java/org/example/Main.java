@@ -8,8 +8,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Main {
     public static void main (String[] args) throws InterruptedException {
-
+        WebDriverManager.chromedriver().browserVersionDetectionCommand("google-chrome --version | cut -d ' ' -f 3");
         WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver()
+                .driverVersion("116.0.5845.96") // Set the desired ChromeDriver version
+                .cachePath("'https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json'") // Set the path where ChromeDriver will be downloaded
+                .setup();
         ChromeOptions co = new ChromeOptions();
         co.addArguments("--remote-allow-origins=*");
         WebDriver driver = new ChromeDriver(co);
